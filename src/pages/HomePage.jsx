@@ -26,6 +26,7 @@ const HomePage = () => {
   return (
     <div>
       <h2>Trending today</h2>
+      <p></p>
       <TrendingMovies movies={trendingList} />
     </div>
   );
