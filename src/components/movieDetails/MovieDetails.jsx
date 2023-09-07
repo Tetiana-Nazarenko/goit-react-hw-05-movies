@@ -8,7 +8,7 @@ export const MoviesDetails = ({ movieDetails }) => {
       <img
         src={`${imageURL}${movieDetails.poster_path}`}
         //src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
-        alt="There schould be a picture"
+        alt=""
         width="250"
       />
       <h2>{movieDetails.title}</h2>
