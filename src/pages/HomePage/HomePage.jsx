@@ -3,6 +3,9 @@ import { useEffect, useState } from 'react';
 import { getTrendingMovies } from 'API';
 import { TrendingMovies } from 'components/TrendingMovies';
 
+//*** */
+import { TrendingContainer, TrendingTitle } from './HomePage.styled';
+
 const HomePage = () => {
   const [trendingList, setTrendingList] = useState([]);
 
@@ -24,11 +27,10 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Trending today</h2>
-      <p></p>
+    <TrendingContainer>
+      <TrendingTitle>Trending today</TrendingTitle>
       <TrendingMovies movies={trendingList} />
-    </div>
+    </TrendingContainer>
   );
 };
 export default HomePage;

@@ -3,13 +3,15 @@ import { Toaster } from 'react-hot-toast';
 
 import styled from 'styled-components';
 
-import HomePage from 'pages/HomePage';
-import MoviesPage from 'pages/MoviesPage';
-import SingleMoviePage from 'pages/singleMoviePage';
+import HomePage from 'pages/HomePage/HomePage';
+import MoviesPage from 'pages/MoviePage/MoviesPage';
+import SingleMoviePage from 'pages/SingleMoviePage/singleMoviePage';
 
 //*** */
-import MoviesCast from './Cast/Cast';
-import MoviesReviews from './Reviews/Reviews';
+import MoviesCast from '../Cast/Cast';
+import MoviesReviews from '../Reviews/Reviews';
+//*** */
+import { List } from './App.styled';
 
 const StyledLink = styled(NavLink)`
   color: black;
@@ -23,14 +25,14 @@ export const App = () => {
   return (
     <div>
       <nav>
-        <ul>
+        <List>
           <li>
             <StyledLink to="/">Home</StyledLink>
           </li>
           <li>
             <StyledLink to="/movies">Movies</StyledLink>
           </li>
-        </ul>
+        </List>
       </nav>
       <hr />
       <Routes>

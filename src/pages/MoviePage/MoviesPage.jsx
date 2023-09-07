@@ -2,9 +2,12 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import { getQueryMovies } from 'API';
-import { QueryMovies } from 'components/QueryMovies';
+import { QueryMovies } from 'components/QueryMovies/QueryMovies';
 import { Loader } from 'components/Loader/Loader';
 import toast from 'react-hot-toast';
+
+//*** */
+import { Form, Input, Button } from './MoviePage.styled';
 
 //****
 const MoviesPage = () => {
@@ -15,7 +18,9 @@ const MoviesPage = () => {
   const query = searchParams.get('query') ?? '';
 
   useEffect(() => {
-    if (query === '') return;
+    if (query === '') {
+      return;
+    }
 
     async function handleQueryMovies() {
       try {
@@ -51,10 +56,10 @@ const MoviesPage = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="query" />
-        <button type="submit">Search</button>
-      </form>
+      <Form onSubmit={handleSubmit}>
+        <Input type="text" name="query" />
+        <Button type="submit">Search</Button>
+      </Form>
       {loading ? <Loader /> : <QueryMovies movies={movieList} />}
     </div>
   );

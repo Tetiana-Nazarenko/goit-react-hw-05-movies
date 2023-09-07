@@ -1,17 +1,27 @@
+import {
+  CastList,
+  CastListItem,
+  CastName,
+  CastCharacter,
+} from './CastDetails.styled';
 export const CastDetails = ({ castInfo }) => {
   return (
-    <ul>
+    <CastList>
       {castInfo.map(cast => (
-        <li key={cast.id}>
+        <CastListItem key={cast.id}>
           <img
             src={`https://image.tmdb.org/t/p/w500${cast.profile_path}`}
             alt=""
-            width="100"
+            width="150"
           />
-          <h2>Name:{cast.name}</h2>
-          <p>Charaсter: {cast.character}</p>
-        </li>
+          <h2>
+            Name: <br /> <CastName>{cast.name} </CastName>
+          </h2>
+          <p>
+            Charaсter: <CastCharacter>{cast.character} </CastCharacter>
+          </p>
+        </CastListItem>
       ))}
-    </ul>
+    </CastList>
   );
 };

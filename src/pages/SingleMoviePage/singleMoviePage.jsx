@@ -5,6 +5,8 @@ import { getMoviesDetails } from 'API';
 
 import { MoviesDetails } from 'components/movieDetails/MovieDetails';
 import { Loader } from 'components/Loader/Loader';
+//*** */
+import { GoBack } from './SingleMoviePage.styled';
 
 const SingleMoviePage = () => {
   const { movieID } = useParams();
@@ -31,13 +33,12 @@ const SingleMoviePage = () => {
 
   return (
     <div>
-      <ul>
+      <GoBack>
         <li>
-          <Link to={backLink}>Go back</Link>
+          <Link to={backLink}>&#8656; Go back</Link>
         </li>
-      </ul>
+      </GoBack>
 
-      <p>About movie:</p>
       {loading ? <Loader /> : <MoviesDetails movieDetails={movieInfo} />}
     </div>
   );
