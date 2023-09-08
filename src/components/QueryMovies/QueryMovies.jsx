@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { List } from './QueryMovies.styled';
+
 export const QueryMovies = ({ movies }) => {
   return (
     <List>

@@ -2,16 +2,23 @@ import { Routes, Route, NavLink } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 
 import styled from 'styled-components';
+import { List } from './App.styled';
 
 import HomePage from 'pages/HomePage/HomePage';
 import MoviesPage from 'pages/MoviePage/MoviesPage';
 import SingleMoviePage from 'pages/SingleMoviePage/singleMoviePage';
 
-//*** */
 import MoviesCast from '../Cast/Cast';
 import MoviesReviews from '../Reviews/Reviews';
 //*** */
-import { List } from './App.styled';
+
+// const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
+// const MoviesPage = lazy(() => import('../../pages/MoviePage/MoviesPage'));
+// const SingleMoviePage = lazy(() =>
+//   import('pages/SingleMoviePage/singleMoviePage')
+// );
+//  const MoviesCast = lazy(() => import('../Cast/Cast'));
+//  const MoviesReviews = lazy(() => import('../Reviews/Reviews'));
 
 const StyledLink = styled(NavLink)`
   color: black;

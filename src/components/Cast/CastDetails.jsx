@@ -4,6 +4,7 @@ import {
   CastName,
   CastCharacter,
 } from './CastDetails.styled';
+
 export const CastDetails = ({ castInfo }) => {
   return (
     <CastList>
