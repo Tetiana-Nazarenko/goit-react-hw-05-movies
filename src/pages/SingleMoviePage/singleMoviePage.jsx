@@ -13,6 +13,9 @@ const SingleMoviePage = () => {
   const [movieInfo, setMovieInfo] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const location = useLocation();
+  const backLink = location.state?.from ?? '/movies';
+
   useEffect(() => {
     async function handleIdMovie() {
       try {
@@ -28,19 +31,14 @@ const SingleMoviePage = () => {
     handleIdMovie();
   }, [movieID]);
 
-  const location = useLocation();
-  const backLink = location.state?.from ?? '/';
-
   return (
-    <div>
+    <>
       <GoBack>
-        <li>
-          <Link to={backLink}>&#8656; Go back</Link>
-        </li>
+        <Link to={backLink}> &#8656; Go back</Link>
       </GoBack>
 
       {loading ? <Loader /> : <MoviesDetails movieDetails={movieInfo} />}
-    </div>
+    </>
   );
 };
 export default SingleMoviePage;

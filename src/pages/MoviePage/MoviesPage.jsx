@@ -1,11 +1,11 @@
 //import { Suspense } from 'react';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 import { getQueryMovies } from 'API';
 import { QueryMovies } from 'components/QueryMovies/QueryMovies';
 import { Loader } from 'components/Loader/Loader';
-import toast from 'react-hot-toast';
 
 //*** */
 import { Form, Input, Button } from './MoviePage.styled';
