@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const List = styled.ul`
+const List = styled.ul`
   margin-left: 50px;
   list-style: none;
   display: flex;
@@ -8,3 +8,4 @@ export const List = styled.ul`
   font-size: 26px;
   font-weight: 700;
 `;
+export default List;

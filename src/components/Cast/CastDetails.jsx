@@ -5,7 +5,7 @@ import {
   CastCharacter,
 } from './CastDetails.styled';
 
-export const CastDetails = ({ castInfo }) => {
+const CastDetails = ({ castInfo }) => {
   return (
     <CastList>
       {castInfo.map(cast => (
@@ -26,3 +26,4 @@ export const CastDetails = ({ castInfo }) => {
     </CastList>
   );
 };
+export default CastDetails;

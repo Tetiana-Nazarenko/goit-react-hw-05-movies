@@ -1,4 +1,4 @@
-export const ReviewsDetails = ({ reviews }) => {
+const ReviewsDetails = ({ reviews }) => {
   return (
     <ul>
       {reviews.map(review => (
@@ -10,3 +10,4 @@ export const ReviewsDetails = ({ reviews }) => {
     </ul>
   );
 };
+export default ReviewsDetails;

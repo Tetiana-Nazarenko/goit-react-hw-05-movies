@@ -3,7 +3,7 @@ import { Link, useParams, useLocation } from 'react-router-dom';
 
 import { getMoviesDetails } from 'API';
 
-import { MoviesDetails } from 'components/movieDetails/MovieDetails';
+import MoviesDetails from 'components/movieDetails/MovieDetails';
 import { Loader } from 'components/Loader/Loader';
 //*** */
 import { GoBack } from './SingleMoviePage.styled';
@@ -14,7 +14,7 @@ const SingleMoviePage = () => {
   const [loading, setLoading] = useState(false);
 
   const location = useLocation();
-  const backLink = location.state?.from ?? '/movies';
+  const backLink = location.state?.from ?? '/';
 
   useEffect(() => {
     async function handleIdMovie() {

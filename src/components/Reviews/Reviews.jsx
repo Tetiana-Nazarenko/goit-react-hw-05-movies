@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMoviesReviews } from 'API';
 
-import { ReviewsDetails } from './ReviewDetails';
+import ReviewsDetails from './ReviewDetails';
 import { Loader } from 'components/Loader/Loader';
 
 const MoviesReviews = () => {

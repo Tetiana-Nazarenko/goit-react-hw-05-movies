@@ -1,4 +1,4 @@
-//import { Suspense } from 'react';
+import { Suspense } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
 import {
@@ -7,7 +7,7 @@ import {
   AddList,
 } from './MovieDetails.styled';
 
-export const MoviesDetails = ({ movieDetails }) => {
+const MoviesDetails = ({ movieDetails }) => {
   const imageURL = 'https://image.tmdb.org/t/p/w500';
 
   return (
@@ -44,7 +44,10 @@ export const MoviesDetails = ({ movieDetails }) => {
         </li>
       </AddList>
       <hr />
-      <Outlet />
+      <Suspense fallback={<div> Loading subpage...</div>}>
+        <Outlet />
+      </Suspense>
     </MovieDetailsBlock>
   );
 };
+export default MoviesDetails;

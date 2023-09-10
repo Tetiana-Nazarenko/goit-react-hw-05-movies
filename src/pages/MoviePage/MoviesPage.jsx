@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 import { getQueryMovies } from 'API';
-import { QueryMovies } from 'components/QueryMovies/QueryMovies';
+import QueryMovies from 'components/QueryMovies/QueryMovies';
 import { Loader } from 'components/Loader/Loader';
 
 //*** */
@@ -20,6 +20,7 @@ const MoviesPage = () => {
 
   useEffect(() => {
     if (query === '') {
+      setMovieList([]);
       return;
     }
 
