@@ -16,11 +16,9 @@ const MoviesPage = () => {
   const [movieList, setMovieList] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const query = searchParams.get('query') ?? '';
-
   useEffect(() => {
+    const query = searchParams.get('query') ?? '';
     if (query === '') {
-      setMovieList([]);
       return;
     }
 
@@ -44,7 +42,7 @@ const MoviesPage = () => {
       }
     }
     handleQueryMovies();
-  }, [query]);
+  }, [searchParams]);
 
   const handleSubmit = evt => {
     evt.preventDefault();

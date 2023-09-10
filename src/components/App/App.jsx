@@ -17,7 +17,7 @@ import SharedLayout from 'components/SharedLayout';
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
 const MoviesPage = lazy(() => import('../../pages/MoviePage/MoviesPage'));
 const SingleMoviePage = lazy(() =>
-  import('pages/SingleMoviePage/singleMoviePage')
+  import('../../pages/SingleMoviePage/singleMoviePage')
 );
 const MoviesCast = lazy(() => import('../Cast/Cast'));
 const MoviesReviews = lazy(() => import('../Reviews/Reviews'));
@@ -47,8 +47,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="/movies" element={<MoviesPage />} />
-          <Route path="/movies/:movieID" element={<SingleMoviePage />}>
+          <Route path="movies" element={<MoviesPage />} />
+          <Route path="movies/:movieID" element={<SingleMoviePage />}>
             <Route path="cast" element={<MoviesCast />} />
             <Route path="reviews" element={<MoviesReviews />} />
           </Route>

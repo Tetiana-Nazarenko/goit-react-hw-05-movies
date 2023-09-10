@@ -37,10 +37,10 @@ const MoviesDetails = ({ movieDetails }) => {
       <h3>Additional information</h3>
       <AddList>
         <li>
-          <Link to="cast"> Cast</Link>
+          <Link to="cast">Cast</Link>
         </li>
         <li>
-          <Link to="reviews"> Reviews </Link>
+          <Link to="reviews">Reviews</Link>
         </li>
       </AddList>
       <hr />

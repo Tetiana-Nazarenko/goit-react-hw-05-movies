@@ -34,9 +34,9 @@ const MoviesCast = () => {
   }, [movieID]);
 
   return (
-    <div>
+    <>
       <CastDetails castInfo={movieCast} />
-    </div>
+    </>
   );
 };
 export default MoviesCast;
